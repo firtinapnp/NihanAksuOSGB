@@ -15,30 +15,11 @@
 <body>
 
   <header>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper indigo lighten-2">
-          <a href="#!" class="brand-logo left"><img src="logo.png" alt="Logo"></a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="index.html">Anasayfa</a></li>
-            <li><a href="hakkimizda.html">Hakkımızda</a></li>
-            <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
-            <li><a href="belgeler.html">Belgelerimiz</a></li>
-            <li><a href="referans.html">Referanslarımız</a></li>
-            <li><a href="iletisim.html">İletişim</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <ul class="side-nav" id="mobile-demo">
-      <li><a href="index.html">Anasayfa</a></li>
-      <li><a href="hakkimizda.html">Hakkımızda</a></li>
-      <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
-      <li><a href="belgeler.html">Belgelerimiz</a></li>
-      <li><a href="referans.html">Referanslarımız</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
-    </ul>
+      <script>
+      $(document).ready(function(){
+          $("header").load("navbar.html");
+      });
+    </script>
   </header>
 
 
@@ -47,20 +28,20 @@
     <div class="slider">
       <ul class="slides">
         <li>
-          <img src="uzmanlar2.jpg"> <!-- random image -->
+          <img src="images/uzmanlar2.jpg"> <!-- random image -->
           <div class="caption center-align">
             <h3 class="white-text">Nihan Aksu Ortak Sağlık Güvenlik Birimi'ne</h3>
             <h5 class="light grey-text text-darken-3"><b>Hoşgeldiniz!</b></h5>
           </div>
         </li>
         <li>
-          <img src="doktor1.jpg" class="responsive-img"> <!-- random image -->
+          <img src="images/doktor1.jpg" class="responsive-img"> <!-- random image -->
           <div class="caption right-align">
             <h3 class="black-text">İş sağlığı ve güvenliği hizmetlerimiz <br> için lütfen bizimle iletişime geçiniz</h3>
           </div>
         </li>
         <li>
-          <img src="baret.jpg"> <!-- random image -->
+          <img src="images/baret.jpg"> <!-- random image -->
           <div class="caption right-align">
           </div>
         </li>
@@ -100,7 +81,7 @@
           <div class="col s12 m4">
             <div class="card">
               <div class="card-image">
-                <img src="uzmanlar.jpg" height="250">
+                <img src="images/uzmanlar.jpg" height="250">
                 <span class="card-title black-text">İş Güvenliği Uzmanı</span>
               </div>
               <div class="card-action">
@@ -111,7 +92,7 @@
           <div class="col s12 m4">
             <div class="card">
               <div class="card-image">
-                <img src="doktor.jpg" height="250">
+                <img src="images/doktor.jpg" height="250">
                 <span class="card-title black-text">İşyeri Hekimi</span>
               </div>
               <div class="card-action">
@@ -122,7 +103,7 @@
           <div class="col s12 m4">
             <div class="card">
               <div class="card-image">
-                <img src="saglik.png" height="250">
+                <img src="images/saglik.png" height="250">
                 <span class="card-title black-text">Sağlık Personeli</span>
               </div>
               <div class="card-action">
@@ -139,7 +120,7 @@
         <div class="col s6 m4 offset-m2">
           <div class="card">
             <div class="card-image">
-              <a target="_blank" href="data.xls"><img src="unlem.png" ></a>
+              <a target="_blank" href="data.xls"><img src="images/unlem.png" ></a>
 
             </div>
             <div class="card-content">
@@ -152,7 +133,7 @@
          <div class="col s6 m4">
            <div class="card">
              <div class="card-image">
-               <a target="_blank" href="https://isgkatip.csgb.gov.tr"><img src="tik.jpg"></a>
+               <a target="_blank" href="https://isgkatip.csgb.gov.tr"><img src="images/tik.jpg"></a>
              </div>
              <div class="card-content">
                <p>ISG <br> Katip <br> Onay</p>

@@ -31,32 +31,13 @@
   });
   });
   </script>
-    <header>
-        <div class="navbar-fixed">
-            <nav>
-                <div class="nav-wrapper indigo lighten-2">
-                    <a href="#!" class="brand-logo left"><img src="logo.png" alt="Logo"></a>
-                    <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="index.html">Anasayfa</a></li>
-                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                        <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
-                        <li><a href="belgeler.html">Belgelerimiz</a></li>
-                        <li><a href="referans.html">Referanslarımız</a></li>
-                        <li><a href="iletisim.html">İletişim</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <ul class="side-nav" id="mobile-demo">
-            <li><a href="index.html">Anasayfa</a></li>
-            <li><a href="hakkimizda.html">Hakkımızda</a></li>
-            <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
-            <li><a href="belgeler.html">Belgelerimiz</a></li>
-            <li><a href="referans.html">Referanslarımız</a></li>
-            <li><a href="iletisim.html">İletişim</a></li>
-        </ul>
-    </header>
+  <header>
+      <script>
+      $(document).ready(function(){
+          $("header").load("navbar.html");
+      });
+    </script>
+  </header>
 
 
     <main>
