@@ -20,14 +20,19 @@ body {
      height: 3.56rem;
  }
  .parallax img{
-     filter: brightness(0.3);
+     filter: brightness(0.4);
  }
-
+.leave-padding{
+    padding-top:4rem;
+}
  #map {
    height: 400px;
    width: 100%;
 
  }
+ .parallax-container {
+      height:30rem;
+}
  #carousel-content{
     height:550px;
  }

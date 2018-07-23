@@ -1,242 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ana Sayfa</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-  <link rel="stylesheet"  href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ana Sayfa</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-      <script>
-      $(document).ready(function(){
-          $("header").load("navbar.html");
-      });
-    </script>
-  </header>
+    <header>
+        <script>
+        $(document).ready(function(){
+            $("header").load("navbar.html");
+            $("footer").load("footer.html");
+            Materialize.fadeInImage('#welcome');
+            Materialize.fadeInImage('#contact-us');
+
+            $('.parallax').parallax();
+
+        });
+        </script>
+    </header>
 
 
 
-  <main>
-    <div class="slider">
-      <ul class="slides">
-        <li>
-          <img src="images/uzmanlar2.jpg"> <!-- random image -->
-          <div class="caption center-align">
-            <h3 class="white-text">Nihan Aksu Ortak Sağlık Güvenlik Birimi'ne</h3>
-            <h5 class="light grey-text text-darken-3"><b>Hoşgeldiniz!</b></h5>
-          </div>
-        </li>
-        <li>
-          <img src="images/doktor1.jpg" class="responsive-img"> <!-- random image -->
-          <div class="caption right-align">
-            <h3 class="black-text">İş sağlığı ve güvenliği hizmetlerimiz <br> için lütfen bizimle iletişime geçiniz</h3>
-          </div>
-        </li>
-        <li>
-          <img src="images/baret.jpg"> <!-- random image -->
-          <div class="caption right-align">
-          </div>
-        </li>
+    <main>
+        <!--
+        <div class="slider">
+            <ul class="slides">
+                <li>
+                    <img src="images/uzmanlar2.jpg">
+                    <div class="caption center-align">
+                        <h3 class="white-text">Nihan Aksu Ortak Sağlık Güvenlik Birimi'ne</h3>
+                        <h5 class="light grey-text text-darken-3"><b>Hoşgeldiniz!</b></h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/doktor1.jpg" class="responsive-img">
+                    <div class="caption right-align">
+                        <h3 class="black-text">İş sağlığı ve güvenliği hizmetlerimiz <br> için lütfen bizimle iletişime geçiniz</h3>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/baret.jpg">
+                    <div class="caption right-align">
+                    </div>
+                </li>
 
-      </ul>
-    </div>
-
-    <!--  Slider ends -->
-
-
-      <!-- Calculation starts-->
-      <div class="container">
-        <h2 class="center-align">Hizmet Süresi Hesaplama</h2>
-        <div class="row">
-          <div class="input-field col s12 m8 offset-m2">
-            <select id="danger-type">
-              <option value="" disabled selected>Seçiniz</option>
-              <option value="1">Az Tehlikeli</option>
-              <option value="2">Tehlikeli</option>
-              <option value="3">Çok Tehlikeli</option>
-            </select>
-            <label>Tehlike Sınıfı</label>
-          </div>
+            </ul>
         </div>
-        <div class="row">
-          <div class="input-field col s12 m8 offset-m2">
-            <input id="employee-number" type="number" class="validate">
-            <label for="employee-number">Çalışan Sayısı Giriniz</label>
-          </div>
+       -->
+		<div class="parallax-container">
+			<div class="parallax"><img src="images/uzmanlar2.jpg"></div>
+			<ul id="welcome" class="caption center-align leave-padding">
+				<li>
+                    <h1 class="white-text">Nihan Aksu Ortak Sağlık Güvenlik Birimi'ne</h3>
+				</li>
+				<li>
+					<h2 class="center-align blue-grey-text text-lighten-3">Hoşgeldiniz!</h5>
+				</li>
+			</ul>
         </div>
-        <div class="row">
-          <div class="col m2 offset-m5 s4 offset-s4">
-            <a class="waves-effect waves-light btn" id="calc-btn">Hesapla</a>
-          </div>
+        <!--  Slider ends -->
+
+
+        <!-- Calculation starts-->
+        <div class="container">
+            <h2 class="center-align">Hizmet Süresi Hesaplama</h2>
+            <div class="row">
+                <div class="input-field col s12 m8 offset-m2 light-blue-text darken-1">
+                    <select id="danger-type">
+                        <option value="" disabled selected>Seçiniz</option>
+                        <option value="1"></option>
+                        <option value="2">Tehlikeli</option>
+                        <option value="3">Çok Tehlikeli</option>
+                    </select>
+                    <label>Tehlike Sınıfı</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m8 offset-m2">
+                    <input id="employee-number" type="number" class="validate">
+                    <label for="employee-number" class="light-blue-text darken-1">Çalışan Sayısı Giriniz</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m2 offset-m5 s4 offset-s4">
+                    <a class="waves-effect waves-light btn light-blue darken-1" id="calc-btn">Hesapla</a>
+                </div>
+            </div>
+            <div id="show-calc" class="row">
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/uzmanlar.jpg" height="250">
+                            <span class="card-title black-text">İş Güvenliği Uzmanı</span>
+                        </div>
+                        <div class="card-action">
+                            <p id="uzm"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/doktor.jpg" height="250">
+                            <span class="card-title black-text">İşyeri Hekimi</span>
+                        </div>
+                        <div class="card-action">
+                            <p id="hek"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/saglik.png" height="250">
+                            <span class="card-title black-text">Sağlık Personeli</span>
+                        </div>
+                        <div class="card-action">
+                            <p id="pers"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="show-calc" class="row">
-          <div class="col s12 m4">
-            <div class="card">
-              <div class="card-image">
-                <img src="images/uzmanlar.jpg" height="250">
-                <span class="card-title black-text">İş Güvenliği Uzmanı</span>
-              </div>
-              <div class="card-action">
-                <p id="uzm"></p>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m4">
-            <div class="card">
-              <div class="card-image">
-                <img src="images/doktor.jpg" height="250">
-                <span class="card-title black-text">İşyeri Hekimi</span>
-              </div>
-              <div class="card-action">
-                <p id="hek"></p>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m4">
-            <div class="card">
-              <div class="card-image">
-                <img src="images/saglik.png" height="250">
-                <span class="card-title black-text">Sağlık Personeli</span>
-              </div>
-              <div class="card-action">
-                <p id="pers"></p>
-              </div>
-            </div>
-          </div>
+
+
+
+        <div class="parallax-container">
+			<div class="parallax"><img src="images/doktor1.jpg"></div>
+			<ul id="contact-us" class="caption center-align leave-padding">
+				<li>
+                    <h3 class="blue-grey-text text-lighten-5">İş sağlığı ve güvenliği hizmetlerimiz <br> için lütfen bizimle iletişime geçiniz</h3>
+                </li>
+			</ul>
         </div>
-      </div>
 
-      <div class="container">
 
-      <div class="row">
-        <div class="col s6 m4 offset-m2">
-          <div class="card">
-            <div class="card-image">
-              <a target="_blank" href="data.xls"><img src="images/unlem.png" ></a>
 
+        <div class="container">
+
+            <div class="row">
+                <div class="col s6 m4 offset-m2">
+                    <div class="card">
+                        <div class="card-image">
+                            <a target="_blank" href="data.xls"><img src="images/unlem.png" ></a>
+
+                        </div>
+                        <div class="card-content">
+                            <p>Tehlike Sınıfını Belirleme</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col s6 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <a target="_blank" href="https://isgkatip.csgb.gov.tr"><img src="images/tik.jpg"></a>
+                        </div>
+                        <div class="card-content">
+                            <p>ISG Katip Onay</p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <div class="card-content">
-              <p>Tehlike <br> Sınıfını <br> Belirleme</p>
-              </div>
 
-            </div>
-          </div>
-
-         <div class="col s6 m4">
-           <div class="card">
-             <div class="card-image">
-               <a target="_blank" href="https://isgkatip.csgb.gov.tr"><img src="images/tik.jpg"></a>
-             </div>
-             <div class="card-content">
-               <p>ISG <br> Katip <br> Onay</p>
-             </div>
-
-           </div>
-         </div>
-       </div>
-
-      </div>
+        </div>
 
     </main>
 
-    <footer class="page-footer indigo lighten-2">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h6>GSM :<br>+90 533 517 69 19 <br> +90 542 776 66 72</h6>
-            <img src="" alt=""> <!-- HERE WE'LL HAVE THE LOGO AGAIN-->
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <ul>
-              <li><a target="_blank" href="https://www.facebook.com/Nihan-Aksu-Ortak-Sağlık-Güvenlik-Birimi-175061766014240/" class="waves-effect waves-light btn-large"><i class="fa fa-facebook"></i></a>
-                <a class="btn-large" onclick="Materialize.toast('info@nihanaksuosgb.com', 4000,'')"><i class="material-icons">mail</i></a>
+    <footer >
 
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container col">
-          &nbsp &nbsp © 2017 Nihan Aksu İş Sağlığı ve Güvenliği Ltd. Şti.
-        </div>
-        <div class="container">
-          <h6>B. Çivitcioğlu <br> F. Küçük <span><a class="grey-text text-lighten-4 right" href="iletisim.html">İletişim &nbsp &nbsp &nbsp &nbsp </a>
-</span></h6>
-        </div>
-
-      </div>
     </footer>
     <script>
 
     $(document).ready(function(){
-      $('.slider').slider();
+        $('.slider').slider();
     });
 
     $(document).ready(function() {
-      $('select').material_select();
-      $("#show-calc").hide();
-      $(".button-collapse").sideNav({
-        menuWidth: 200,
-        edge: 'left',
-        closeOnClick: true,
-        draggable: true
-    });
+        $('select').material_select();
+        $("#show-calc").hide();
+        $(".button-collapse").sideNav({
+            menuWidth: 200,
+            edge: 'left',
+            closeOnClick: true,
+            draggable: true
+        });
     });
     $("#calc-btn").on("click",function(e){
-      var number = $("#employee-number").val();
-      if(!number.match(/^\d+$/)){
-        console.log("Error");
-        $("#show-calc").hide();
-      }else{
-        var dEl = document.getElementById("danger-type");
-        var dangerType = dEl.options[dEl.selectedIndex].value;
-        console.log(number);
-        console.log(dangerType);
-        number = parseInt(number);
-        dangerType = parseInt(dangerType);
-        var saglik = undefined;
-        if(dangerType===3){
-          if(number>=10 && number<=49){
-            saglik = 10*number;
-          }else if(number>=50 && number<=249){
-            saglik = 15*number;
-          }else if(number>=250){
-            saglik = 20*number;
-          }
-        }
-        var data={
-          "hekim":(5*number*dangerType),
-          "uzman":(Math.pow(2,dangerType-1)*10*number),
-          "saglik":saglik
-        };
-
-        console.log(JSON.stringify(data));
-
-        var hekmin = data.hekim%60;
-        var hekhour = Math.floor(data.hekim/60);
-        var uzmmin = data.uzman%60;
-        var uzmhour = Math.floor(data.uzman/60);
-
-        $("#hek").html(hekhour+" saat "+hekmin+"dk&#x0002F;Ay");
-        $("#uzm").html(uzmhour+" saat "+uzmmin+"dk&#x0002F;Ay");
-        if(data.saglik){
-          var sagmin = data.saglik%60;;
-          var saghour = Math.floor(data.saglik/60);
-          $("#pers").html(saghour+" saat "+sagmin+"dk&#x0002F;Ay");
+        var number = $("#employee-number").val();
+        if(!number.match(/^\d+$/)){
+            console.log("Error");
+            $("#show-calc").hide();
         }else{
-          $("#pers").html("Zorunluluk Yok");
+            var dEl = document.getElementById("danger-type");
+            var dangerType = dEl.options[dEl.selectedIndex].value;
+            console.log(number);
+            console.log(dangerType);
+            number = parseInt(number);
+            dangerType = parseInt(dangerType);
+            var saglik = undefined;
+            if(dangerType===3){
+                if(number>=10 && number<=49){
+                    saglik = 10*number;
+                }else if(number>=50 && number<=249){
+                    saglik = 15*number;
+                }else if(number>=250){
+                    saglik = 20*number;
+                }
+            }
+            var data={
+                "hekim":(5*number*dangerType),
+                "uzman":(Math.pow(2,dangerType-1)*10*number),
+                "saglik":saglik
+            };
+
+            console.log(JSON.stringify(data));
+
+            var hekmin = data.hekim%60;
+            var hekhour = Math.floor(data.hekim/60);
+            var uzmmin = data.uzman%60;
+            var uzmhour = Math.floor(data.uzman/60);
+
+            $("#hek").html(hekhour+" saat "+hekmin+"dk&#x0002F;Ay");
+            $("#uzm").html(uzmhour+" saat "+uzmmin+"dk&#x0002F;Ay");
+            if(data.saglik){
+                var sagmin = data.saglik%60;;
+                var saghour = Math.floor(data.saglik/60);
+                $("#pers").html(saghour+" saat "+sagmin+"dk&#x0002F;Ay");
+            }else{
+                $("#pers").html("Zorunluluk Yok");
+            }
+            $("#show-calc").show();
         }
-        $("#show-calc").show();
-      }
 
 
 
@@ -245,5 +251,5 @@
 
 
 
-  </body>
-  </html>
+</body>
+</html>
