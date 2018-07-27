@@ -25,6 +25,14 @@ body {
 .leave-padding{
     padding-top:4rem;
 }
+@media only screen and (max-width: 600px) {
+    .leave-padding{
+        padding-top:0.5rem;
+    }
+}
+.darken-a-bit{
+    filter: brightness(0.5);
+}
  #map {
    height: 400px;
    width: 100%;
