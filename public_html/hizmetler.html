@@ -18,155 +18,183 @@
 
 </head>
 <body>
-  <script>
-  $(document).ready(function(){
-      $('.carousel.carousel-slider').carousel({fullWidth: true});
-      $("#next-btn").on("click",function(){
-          $('.carousel').carousel('next');
-      });
-      $(".button-collapse").sideNav({
-        menuWidth: 200,
-        edge: 'left',
-        closeOnClick: true,
-        draggable: true
+    <script>
+    $(document).ready(function(){
+        $(".button-collapse").sideNav({
+            menuWidth: 200,
+            edge: 'left',
+            closeOnClick: true,
+            draggable: true
+        });
     });
-  });
-  </script>
-  <header>
-      <script>
-      $(document).ready(function(){
-          $("header").load("navbar.html");
-          $("footer").load("footer.html");
-      });
     </script>
-  </header>
+    <style>
+    .active{
+        background-color: #039be5;
+        color: rgba(245, 246, 247, 0.999);
+    }
+    ul.bullet{
+        list-style-type: disc;
+    }
+    </style>
+    <header>
+        <script>
+        $(document).ready(function(){
+            $("header").load("navbar.html");
+            $("footer").load("footer.html");
+            $(".collapsible").collapsible({
+                onOpen: function(el) {
+                    $(el).find(".collapsible-header").addClass( "active" );
+                },
+                onClose: function(el) {
+                    $(el).find(".collapsible-header").removeClass( "active" );
+                }
+            })
+        });
+        </script>
+    </header>
 
     <main class="hizmetler">
         <div class="row">
             <div class="col m8 offset-m2 s12">
-                <ul class="collapsible" data-collapsible="accordion">
-                    <li>
-                        <div class="collapsible-header active"><h4>İş Güvenliği Uzmanlığı &#8595  </h4></div>
-                        <div class="collapsible-body">
-                            <ul class="flow-text">
-                                <li>
-                                    &#x2022 İş Güvenliği ile ilgili eğitimler verilir ve eğitim sonunda katılım sertifikası düzenlenir
-                                </li>
-                                <li>
-                                    &#x2022 İş Sağlığı ve İş Güvenliği Kurulu toplantılarına sekreter üye olarak katılınır
-                                </li>
-                                <li>
-                                    &#x2022 Risk analizi raporu hazırlanır.Uygulanmasının takibi yapılır
-                                </li>
-                                <li>
-                                    &#x2022 Acil eylem planı hazırlanır, acil durum ekipleri oluşturulur ve eğitimleri verilir
-                                </li>
-                                <li>
-                                    &#x2022 Çalışma talimatları hazırlanır
-                                </li>
-                                <li>
-                                    &#x2022 İş kazaları incelenir, raporlanır ve aynı şekilde bir iş kazası olmaması için gerekli eğitimler verilir.
-                                </li>
-                                <li>
-                                    &#x2022 İşyerinde gözetim ve denetim sistemi kurulur ve yönetilir
-                                </li>
-                                <li>
-                                    &#x2022 Yıllık Çalışma ve Eğitim Planı hazırlanır
-                                </li>
-                                <li>
-                                    &#x2022 İşverene, iş güvenliği konusunda rehberlik ve danışmanlık yapılır
-                                </li>
-                                <li>
-                                    &#x2022 Sağlık ve Güvenlik Planı hazırlanır
-                                </li>
-                                <li>
-                                    &#x2022 İç Yönetmelik hazırlanır
-                                </li>
-                                <li>
-                                    &#x2022 Patlamadan Korunma Dokümanı hazırlanır
-                                </li>
-                                <li>
-                                    &#x2022 Kişisel koruyucu donanım seçimi konusunda işverene tavsiyede bulunulur
-                                </li>
-                                <li>
-                                    &#x2022 İş ekipmanlarının ve makinelerinin periyodik kontrolleri takip edilir
-                                </li>
-                                <li>
-                                    &#x2022 Yangın güvenliği sağlanır
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><h4>İşyeri Hekimliği  &#8595</h4></div>
-                        <div class="collapsible-body">
-                            <ul class="flow-text">
-                                <li>
-                                    &#x2022 Belirli periyotlarda işyerinde sağlık hizmeti sunulur
-                                </li>
-                                <li>
-                                    &#x2022 Çalışan personel sağlık taramasından geçirilir
-                                </li>
-                                <li>
-                                    &#x2022 Personelin periyodik testlerinin (Akciğer filmi, solunum fonksiyon testi, kan analizi, portör muayenesi v.s.) yapılmasında yönlendirme yapılır
-                                </li>
-                                <li>
-                                    &#x2022 Personele ağır ve tehlikeli işlerde çalışabilirlik raporu düzenlenir
-                                </li>
-                                <li>
-                                    &#x2022 İş Güvenliği Uzmanı ile koordineli çalışarak işyerine gerekli olan mevzuat uygulamaları gerçekleştirilir
-                                </li>
-                                <li>
-                                    &#x2022 İşveren tarafında oluşturulması zorunlu olan İş Sağlığı ve Güvenliği Kurul toplantılarına üye sıfatı ile katılınır
-                                </li>
-                                <li>
-                                    &#x2022 Olağanüstü bir durumda (yangın, patlama, iş kazası v.s.) işyerinde bulunur
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><h4>Diğer Sağlık Personeli   	&#8595</h4></div>
-                        <div class="collapsible-body">
-                            <ul class="flow-text">
-                                <li>
-                                    &#x2022 İş sağlığı ve güvenliği hizmetlerinin planlanması, değerlendirilmesi, izlenmesi ve yönlendirilmesinde işyeri hekimi ile birlikte çalışmak, veri toplamak ve gerekli kayıtları tutmak.
-                                </li>
-                                <li>
-                                    &#x2022 Çalışanların işe giriş/periyodik muayenesi sırasında hekime yardımcı olmak.
-                                </li>
-                                <li>
-                                    &#x2022 İlk yardım hizmetlerinin organizasyonu ve yürütümünde işyeri hekimi ile birlikte çalışmak.
-                                </li>
-                                <li>
-                                    &#x2022 Çalışanların sağlık eğitiminde görev almak
-                                </li>
-                                <li>
-                                    &#x2022 İşyeri bina ve eklentilerinin genel hijyen şartlarının sürekli izlenip denetlemesinde işyeri hekimiyle birlikte çalışmak
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><h4>İş Sağlığı ve Güvenliği Eğitimleri  &#8595</h4></div>
-                        <div class="collapsible-body"><p class="flow-text">İşveren, çalışanların iş sağlığı ve güvenliği eğitimlerini almasını sağlar. Bu eğitim özellikle işe başlamadan önce, çalışma yeri veya iş değişikliğinde, iş ekipmanının değişmesi hâlinde veya yeni teknoloji uygulanması hâlinde verilir. Eğitimler, değişen ve ortaya çıkan yeni risklere uygun olarak yenilenir, gerektiğinde ve düzenli aralıklarla tekrarlanır.</p></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><h4>Risk Analizi</h4></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><h4>Acil Eylem Planı</h4></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><h4>İşe Giriş Sağlık Raporu</h4></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><h4>Tehlikeli Madde Güvenlik Danışmanlığı</h4></div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><h4>LPG Sorumlu Müdürlük Hizmeti</h4></div>
-                    </li>
-                </ul>
+                <div class="container">
+                    <ul class="collapsible popout" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header hoverable"><h5>İş Güvenliği Uzmanlığı</h5></div>
+                            <div class="collapsible-body white">
+                                <ul class="flow-text black-text">
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> İş Güvenliği ile ilgili eğitimler verilir ve eğitim sonunda katılım sertifikası düzenlenir
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> İş Sağlığı ve İş Güvenliği Kurulu toplantılarına sekreter üye olarak katılınır
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Risk analizi raporu hazırlanır.Uygulanmasının takibi yapılır
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Acil eylem planı hazırlanır, acil durum ekipleri oluşturulur ve eğitimleri verilir
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Çalışma talimatları hazırlanır
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> İş kazaları incelenir, raporlanır ve aynı şekilde bir iş kazası olmaması için gerekli eğitimler verilir.
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> İşyerinde gözetim ve denetim sistemi kurulur ve yönetilir
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Yıllık Çalışma ve Eğitim Planı hazırlanır
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> İşverene, iş güvenliği konusunda rehberlik ve danışmanlık yapılır
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Sağlık ve Güvenlik Planı hazırlanır
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> İç Yönetmelik hazırlanır
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Patlamadan Korunma Dokümanı hazırlanır
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Kişisel koruyucu donanım seçimi konusunda işverene tavsiyede bulunulur
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> İş ekipmanlarının ve makinelerinin periyodik kontrolleri takip edilir
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Yangın güvenliği sağlanır
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header hoverable"><h5>İşyeri Hekimliği</h5></div>
+                            <div class="collapsible-body white">
+                                <ul class="flow-text black-text">
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Belirli periyodlarda işyerinde sağlık hizmeti sunulur
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Çalışan personel sağlık taramasından geçirilir
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Personelin periyodik testlerinin (Akciğer filmi, solunum fonksiyon testi, kan analizi, portör muayenesi v.s.) yapılmasında yönlendirme yapılır
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Personele ağır ve tehlikeli işlerde çalışabilirlik raporu düzenlenir
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> İş Güvenliği Uzmanı ile koordineli çalışarak işyerine gerekli olan mevzuat uygulamaları gerçekleştirilir
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> İşveren tarafında oluşturulması zorunlu olan İş Sağlığı ve Güvenliği Kurul toplantılarına üye sıfatı ile katılınır
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Olağanüstü bir durumda (yangın, patlama, iş kazası v.s.) işyerinde bulunur
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header hoverable"><h5>Diğer Sağlık Personeli</h5></div>
+                            <div class="collapsible-body white">
+                                <ul class="flow-text black-text">
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> İş sağlığı ve güvenliği hizmetlerinin planlanması, değerlendirilmesi, izlenmesi ve yönlendirilmesinde işyeri hekimi ile birlikte çalışmak, veri toplamak ve gerekli kayıtları tutmak.
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Çalışanların işe giriş/periyodik muayenesi sırasında hekime yardımcı olmak.
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> İlk yardım hizmetlerinin organizasyonu ve yürütümünde işyeri hekimi ile birlikte çalışmak.
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Çalışanların sağlık eğitiminde görev almak
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> İşyeri bina ve eklentilerinin genel hijyen şartlarının sürekli izlenip denetlemesinde işyeri hekimiyle birlikte çalışmak
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header hoverable"><h5>İş Sağlığı ve Güvenliği Eğitimleri</h5></div>
+                            <div class="collapsible-body white">
+                                <ul class="flow-text black-text">
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> İşveren, çalışanların iş sağlığı ve güvenliği eğitimlerini almasını sağlar. Bu eğitim özellikle işe başlamadan önce, çalışma yeri veya iş değişikliğinde, iş ekipmanının değişmesi hâlinde veya yeni teknoloji uygulanması hâlinde verilir. Eğitimler, değişen ve ortaya çıkan yeni risklere uygun olarak yenilenir, gerektiğinde ve düzenli aralıklarla tekrarlanır.
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header hoverable"><h5>Diğer Hizmetlerimiz</h5></div>
+                            <div class="collapsible-body white">
+                                <ul class="flow-text black-text">
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Risk Analizi
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Acil Eylem Planı
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> İşe Giriş Sağlık Raporu
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> Tehlikeli Madde Güvenlik Danışmanlığı
+                                    </li>
+                                    <li>
+                                        <i class="material-icons">chevron_right</i> LPG Sorumlu Müdürlük Hizmeti
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </main>
